@@ -1,0 +1,1 @@
+define(["Ti/_/declare","Ti/_/Map/Google","Ti/App/Properties"],function(e,t,i){var r=i.getString("ti.map.backend");return e("Ti.Map.View",r?require(r):t)});
