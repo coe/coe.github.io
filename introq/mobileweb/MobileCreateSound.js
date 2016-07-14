@@ -1,0 +1,1 @@
+var MobileCreateSound;module.exports=MobileCreateSound=function(){function e(e){t.src=e.url}var t;return e.name="MobileCreateSound",t=new Audio(""),e.prototype.STATE_STARTING=1,e.prototype.STATE_PAUSED=2,e.prototype.STATE_INITIALIZED=3,e.prototype.STATE_STOPPED=4,e.prototype.STATE_STOPPING=5,e.prototype.play=function(){return t.load(),t.play()},e}();

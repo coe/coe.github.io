@@ -1,4 +1,4 @@
-ts	1468451939000
+ts	1457351389000
 Default-Landscape.png	513333
 Default-Portrait.png	76153
 Default.png	110858
@@ -9,11 +9,11 @@ Itunes.js.map	1831
 alloy
 	CFG.js	33
 	backbone.js	16410
-	constants.js	6075
+	constants.js	5815
 	controllers
 		AppDescriptionController.js	2007
 		AppDownloadButton.js	2148
-		AppTableView.js	6542
+		AppTableView.js	6606
 		BaseController.js	2390
 		index.js	1137
 	models
@@ -31,7 +31,7 @@ alloy
 	underscore.js	14428
 	widget.js	799
 	widgets
-alloy.js	6300
+alloy.js	6301
 app.js	841
 appicon.png	18020
 appicon144.png	20987

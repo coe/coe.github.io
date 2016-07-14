@@ -1,0 +1,1 @@
+define(["Ti/_/declare","Ti/_/lang"],function(e,a){return a.setObject("Ti._.Gestures.TouchMove",{processTouchMoveEvent:function(e){for(var a=e.changedTouches,t=0,i=a.length,n={touchmove:[]};i>t;t++)n.touchmove.push({x:a[t].clientX,y:a[t].clientY});return n}})});
