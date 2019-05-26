@@ -1,21 +1,67 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <title>TipsNote : GitHub Pages Sample</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/marx/2.0.4/marx.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/index.js"></script>
+
+    <title>tsuyoshi hyuga app</title>
 </head>
 
 <body>
-    <main>
-        <h1>GitHub Pages のサンプルです</h1>
-        <a href="http://www.tam-tam.co.jp/tipsnote/"><button>TipsNote に戻る</button></a>
-    </main>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="plan.html">アプリ</a></li>
+                <li><a href="price.html">プライバシーポリシー</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- https://github.com/material-components/material-components-web/tree/master/packages/mdc-layout-grid -->
+    <div class="mdc-layout-grid">
+        <div id="app_collection_view" class="mdc-layout-grid__inner">
+            {% for myapp in myapps %}
+            <div class="mdc-layout-grid__cell">
+                <div class="mdc-card">
+                    <div class="mdc-card__primary-action" tabindex="0" onclick="loadInnerPage()">
+                        <div class="mdc-card__media mdc-card__media--square">
+                            <div class="mdc-card__media-content">{{myapp.title}}</div>
+                        </div>
+                        <!-- ... 主要な操作領域のコンテンツを追加 ... -->
+                    </div>
+                    <div class="mdc-card__actions">
+                        <div class="mdc-card__action-buttons">
+                            <button class="mdc-button mdc-card__action mdc-card__action--button">
+                                <span class="mdc-button__label">Action 1</span>
+                            </button>
+                            <button class="mdc-button mdc-card__action mdc-card__action--button">
+                                <span class="mdc-button__label">Action 2</span>
+                            </button>
+                        </div>
+                        <div class="mdc-card__action-icons">
+                            <button class="material-icons mdc-icon-button mdc-card__action mdc-card__action--icon"
+                                title="Share">share</button>
+                            <button class="material-icons mdc-icon-button mdc-card__action mdc-card__action--icon"
+                                title="More options">more_vert</button>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- cell -->
+            {% endfor %}
 
-    <script>
-        console.log('GitHub Pages Sample');
-    </script>
+        </div>
+    </div>
+    <footer>
+        tsuyoshi hyuga
+    </footer>
 </body>
 
 </html>
