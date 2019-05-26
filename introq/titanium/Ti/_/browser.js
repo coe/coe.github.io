@@ -1,1 +1,0 @@
-define(["Ti/_"],function(e){var a=navigator.userAgent.toLowerCase().match(/(webkit|gecko|trident|presto)/);return e.browser={runtime:a?a[0]:"unknown"}});

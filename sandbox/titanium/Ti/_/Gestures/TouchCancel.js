@@ -1,1 +1,0 @@
-define(["Ti/_/declare","Ti/_/lang"],function(e,a){return a.setObject("Ti._.Gestures.TouchCancel",{processTouchCancelEvent:function(e){for(var a=e.changedTouches,t=0,i=a.length,n={touchcancel:[]};i>t;t++)n.touchcancel.push({x:a[t].clientX,y:a[t].clientY});return n}})});

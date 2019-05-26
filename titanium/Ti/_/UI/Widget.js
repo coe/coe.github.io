@@ -1,1 +1,0 @@
-define(["Ti/_/declare","Ti/UI/View"],function(e,t){return e("Ti._.UI.Widget",t)});

@@ -1,1 +1,0 @@
-module.exports={dependencies:{"com.appcelerator.loading":"1.0","jp.coe.moreappwindow":"1.0"}};

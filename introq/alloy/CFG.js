@@ -1,1 +1,0 @@
-module.exports={dependencies:{"com.appcelerator.loading":"1.0","jp.coe.ad":"1.3","jp.coe.adicon":"1.3","jp.coe.moreappwindow":"1.0"},theme:"main",tablet:{width:728,height:90},phone:{width:320,height:50},rankings:[{name:"Ranking",id:"1"}]};

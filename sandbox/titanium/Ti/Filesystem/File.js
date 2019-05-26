@@ -1,1 +1,0 @@
-define(["Ti/_/declare","Ti/_/Evented","Ti/_/Filesystem/Local","Ti/App/Properties"],function(e,t,i,r){var n=r.getString("ti.fs.backend");return e("Ti.Filesystem.File",[t,n?require(n):i])});

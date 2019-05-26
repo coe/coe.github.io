@@ -1,1 +1,0 @@
-define(["Ti/_/declare","Ti/_/lang"],function(e,t){return t.setObject("Ti._.Gestures.TouchEnd",{processTouchEndEvent:function(e){for(var t=e.changedTouches,i=0,r=t.length,n={touchend:[]};r>i;i++)n.touchend.push({x:t[i].clientX,y:t[i].clientY});return n}})});
