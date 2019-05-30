@@ -1,3 +1,10 @@
+/* 
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+
 function loadInnerPage() {
     // document.getElementById("app_collection_view").setAttribute('src', page);
     // document.getElementById("fillerTitle").setAttribute('style', 'display: none;');
@@ -5,20 +12,20 @@ function loadInnerPage() {
 
     // // Refresh data to force the page to load
     // var objects = document.getElementsByTagName("object");
-    const apps = getApps()
+    const apps = getApps();
     apps.forEach(element => {
         console.log(
             element
-        )
+        );
     });
 }
 
 function loadApps() {
-    console.log("loadApps:" + name)
+    console.log("loadApps:" + name);
     //mdc-layout-grid__cellを作る
-    const myapps = getApps()
+    const myapps = getApps();
     var collectionView = document.getElementById("app_collection_view");
-    collectionView.innerHTML = createCells(myapps)
+    collectionView.innerHTML = createCells(myapps);
 
 }
 
@@ -55,7 +62,7 @@ function createCells(myapps) {
         text += HERE;
 
     });
-    return text
+    return text;
 }
 
 function getApps() {
@@ -65,5 +72,5 @@ function getApps() {
         { title: "dndkodon mastodon client", icon: "https://lh3.googleusercontent.com/oofONQ1aCdpfEEZWfFazKrHX2TuQe5BvwUHZEcSXrjTA7cnBz6ErRxJOD_QetIW46Vo", link: "https://play.google.com/store/apps/details?id=jp.coe.dndkodon", kind: "android" },
         { title: "dndkodon mastodon client", icon: "https://lh3.googleusercontent.com/oofONQ1aCdpfEEZWfFazKrHX2TuQe5BvwUHZEcSXrjTA7cnBz6ErRxJOD_QetIW46Vo", link: "https://play.google.com/store/apps/details?id=jp.coe.dndkodon", kind: "android" },
         { title: "dndkodon mastodon client", icon: "https://lh3.googleusercontent.com/oofONQ1aCdpfEEZWfFazKrHX2TuQe5BvwUHZEcSXrjTA7cnBz6ErRxJOD_QetIW46Vo", link: "https://play.google.com/store/apps/details?id=jp.coe.dndkodon", kind: "android" }
-    ]
+    ];
 }
