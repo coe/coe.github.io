@@ -4,29 +4,22 @@
  * and open the template in the editor.
  */
 
-
-function loadInnerPage() {
-    // document.getElementById("app_collection_view").setAttribute('src', page);
-    // document.getElementById("fillerTitle").setAttribute('style', 'display: none;');
-
-
-    // // Refresh data to force the page to load
-    // var objects = document.getElementsByTagName("object");
-    const apps = getApps();
-    apps.forEach(element => {
-        console.log(
-            element
-        );
-    });
-}
-
 function loadApps() {
-    console.log("loadApps:" + name);
-    //mdc-layout-grid__cellを作る
-    const myapps = getApps();
-    var collectionView = document.getElementById("app_collection_view");
-    collectionView.innerHTML = createCells(myapps);
+    //APIからローディング
 
+    fetch('https://immense-ravine-15653.herokuapp.com/myapps')
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (myJson) {
+            console.log(JSON.stringify(myJson));
+            var collectionView = document.getElementById("app_collection_view");
+            collectionView.innerHTML = createCells(myJson)
+        }).catch(error => {
+            console.error(
+                error
+            )
+        })
 }
 
 function createCells(myapps) {
