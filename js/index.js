@@ -13,8 +13,9 @@ function loadApps() {
         })
         .then(function (myJson) {
             console.log(JSON.stringify(myJson));
-            var collectionView = document.getElementById("app_collection_view");
-            collectionView.innerHTML = createCells(myJson)
+            // var collectionView = document.getElementById("app_collection_view");
+            // collectionView.innerHTML = createCells(myJson)
+            createCells(myJson)
         }).catch(error => {
             console.error(
                 error
@@ -22,7 +23,25 @@ function loadApps() {
         })
 }
 
+/**
+ * 
+ * @param {array} myapps 
+ */
 function createCells(myapps) {
+    var cells = myapps.map(myapp => {
+        var content = document.querySelector('template').content;
+        // Update something in the template DOM.
+        var title = content.querySelector('#title');
+        title.textContent = myapp.title;
+        return content
+    });
+    cells.forEach(cell => {
+        document.querySelector('#app_collection_view').appendChild(
+            document.importNode(cell, true)
+            );
+    });
+}
+function createCellsold(myapps) {
     var text = "";
     myapps.forEach(myapp => {
         const HERE = `
@@ -35,18 +54,9 @@ function createCells(myapps) {
             </div>
             <div class="mdc-card__actions">
                 <div class="mdc-card__action-buttons">
-                    <button class="mdc-button mdc-card__action mdc-card__action--button">
-                        <span class="mdc-button__label">Action 1</span>
+                    <button class="mdc-button">
+                    <img src="./Download-on-the-App-Store/US/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg"/>
                     </button>
-                    <button class="mdc-button mdc-card__action mdc-card__action--button">
-                        <span class="mdc-button__label">Action 2</span>
-                    </button>
-                </div>
-                <div class="mdc-card__action-icons">
-                    <button class="material-icons mdc-icon-button mdc-card__action mdc-card__action--icon"
-                        title="Share">share</button>
-                    <button class="material-icons mdc-icon-button mdc-card__action mdc-card__action--icon"
-                        title="More options">more_vert</button>
                 </div>
             </div>
         </div>

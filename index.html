@@ -25,7 +25,11 @@
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+
         <header>
+                <button>
+                        <img src="./Download-on-the-App-Store/US/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg"/>
+                    </button>
             <nav>
                 <ul>
                     <li><a href="plan.html">アプリ</a></li>
@@ -38,6 +42,25 @@
             <div id="app_collection_view" class="mdc-layout-grid__inner">
 
             </div>
+
+            <template>
+                <div class="mdc-layout-grid__cell">
+                    <div class="mdc-card">
+                        <div class="mdc-card__primary-action" tabindex="0" >
+                            <div class="mdc-card__media mdc-card__media--square">
+                                <div id="title" class="mdc-card__media-content">${myapp.title}</div>
+                            </div>
+                        </div>
+                        <div class="mdc-card__actions">
+                            <div class="mdc-card__action-buttons">
+                                <button class="mdc-button">
+                                <img src="./Download-on-the-App-Store/US/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg"/>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </template>
         </div>
         <footer>
             tsuyoshi hyuga
