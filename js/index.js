@@ -34,24 +34,37 @@ function createCells(myapps) {
 
         // テンプレート内のimg要素
         title = content.querySelector('#title'),
-
+        img = content.querySelector('img'),
         // フラグメント
         fragment = document.createDocumentFragment()
 
     myapps.forEach(myapp => {
-        console.log(myapp)
         var clone;
 
         // テンプレートの要素に適用する
         title.textContent = myapp.title;
+        switch (myapp.kind) {
+            case 0:
+                img.src = "./google-play-badge.png"
+                break;
+
+            case 1:
+                img.src = "./Download-on-the-App-Store/US/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg"
+                break;
+
+            case 2:
+                img.src = "./Download-on-Apple-TV/US/Download_on_Apple_TV/Black_lockup/SVG/Download_on_Apple_TV_Badge_US-UK_RGB_blk_092917.svg"
+                break;
+        }
 
         // テンプレートのノードを複製
         clone = document.importNode(content, true);
+        clone.querySelector('button').addEventListener('click', () => {
+            onClickAppLink(myapp.link)
+        });
 
         // 複製したノードをフラグメントに挿入
         fragment.appendChild(clone);
-
-        return content
     });
     document.querySelector('#app_collection_view').appendChild(fragment);
 
