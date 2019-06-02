@@ -25,55 +25,43 @@ function loadApps() {
 
 /**
  * 
- * @param {array} myapps 
+ * @param {array} MyApp array 
  */
 function createCells(myapps) {
-    var cells = myapps.map(myapp => {
-        var content = document.querySelector('template').content;
-        // Update something in the template DOM.
-        var title = content.querySelector('#title');
+    var
+        // template要素からコンテンツを取得、インスタンスの生成
+        content = document.querySelector('template').content,
+
+        // テンプレート内のimg要素
+        title = content.querySelector('#title'),
+
+        // フラグメント
+        fragment = document.createDocumentFragment()
+
+    myapps.forEach(myapp => {
+        console.log(myapp)
+        var clone;
+
+        // テンプレートの要素に適用する
         title.textContent = myapp.title;
+
+        // テンプレートのノードを複製
+        clone = document.importNode(content, true);
+
+        // 複製したノードをフラグメントに挿入
+        fragment.appendChild(clone);
+
         return content
     });
-    cells.forEach(cell => {
-        document.querySelector('#app_collection_view').appendChild(
-            document.importNode(cell, true)
-            );
-    });
-}
-function createCellsold(myapps) {
-    var text = "";
-    myapps.forEach(myapp => {
-        const HERE = `
-        <div class="mdc-layout-grid__cell">
-        <div class="mdc-card">
-            <div class="mdc-card__primary-action" tabindex="0" >
-                <div class="mdc-card__media mdc-card__media--square">
-                    <div class="mdc-card__media-content">${myapp.title}</div>
-                </div>
-            </div>
-            <div class="mdc-card__actions">
-                <div class="mdc-card__action-buttons">
-                    <button class="mdc-button">
-                    <img src="./Download-on-the-App-Store/US/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg"/>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div> 
-`;
-        text += HERE;
+    document.querySelector('#app_collection_view').appendChild(fragment);
 
-    });
-    return text;
 }
 
-function getApps() {
-    return [
-        { title: "dndkodon mastodon client", icon: "https://lh3.googleusercontent.com/oofONQ1aCdpfEEZWfFazKrHX2TuQe5BvwUHZEcSXrjTA7cnBz6ErRxJOD_QetIW46Vo", link: "https://play.google.com/store/apps/details?id=jp.coe.dndkodon", kind: "android" },
-        { title: "dndkodon mastodon client", icon: "https://lh3.googleusercontent.com/oofONQ1aCdpfEEZWfFazKrHX2TuQe5BvwUHZEcSXrjTA7cnBz6ErRxJOD_QetIW46Vo", link: "https://play.google.com/store/apps/details?id=jp.coe.dndkodon", kind: "android" },
-        { title: "dndkodon mastodon client", icon: "https://lh3.googleusercontent.com/oofONQ1aCdpfEEZWfFazKrHX2TuQe5BvwUHZEcSXrjTA7cnBz6ErRxJOD_QetIW46Vo", link: "https://play.google.com/store/apps/details?id=jp.coe.dndkodon", kind: "android" },
-        { title: "dndkodon mastodon client", icon: "https://lh3.googleusercontent.com/oofONQ1aCdpfEEZWfFazKrHX2TuQe5BvwUHZEcSXrjTA7cnBz6ErRxJOD_QetIW46Vo", link: "https://play.google.com/store/apps/details?id=jp.coe.dndkodon", kind: "android" },
-        { title: "dndkodon mastodon client", icon: "https://lh3.googleusercontent.com/oofONQ1aCdpfEEZWfFazKrHX2TuQe5BvwUHZEcSXrjTA7cnBz6ErRxJOD_QetIW46Vo", link: "https://play.google.com/store/apps/details?id=jp.coe.dndkodon", kind: "android" }
-    ];
+/**
+ * 
+ * @param {string} url 
+ */
+function onClickAppLink(url) {
+    console.log(url)
+    window.open(url, "_blank")
 }
