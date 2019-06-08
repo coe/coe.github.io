@@ -36,7 +36,7 @@ function createCells(myapps) {
         // テンプレート内の要素
         title = content.querySelector('#app_title'),
         img = content.querySelector('#app_media'),
-        icon = content.querySelector('#icon'),
+        storeButton = content.querySelector('#store_link_button_image'),
         // フラグメント
         fragment = document.createDocumentFragment()
 
@@ -49,19 +49,19 @@ function createCells(myapps) {
         // img.style.backgroundColor = "red"
         img.style.backgroundImage = "url(" + myapp.icon + ")";
         console.log(myapp.icon)
-        // switch (myapp.kind) {
-        //     case 0:
-        //         img.src = "./google-play-badge.png"
-        //         break;
+        switch (myapp.kind) {
+            case 0:
+                storeButton.src = "./google-play-badge.png"
+                break;
 
-        //     case 1:
-        //         img.src = "./Download-on-the-App-Store/US/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg"
-        //         break;
+            case 1:
+                storeButton.src = "./Download-on-the-App-Store/US/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg"
+                break;
 
-        //     case 2:
-        //         img.src = "./Download-on-Apple-TV/US/Download_on_Apple_TV/Black_lockup/SVG/Download_on_Apple_TV_Badge_US-UK_RGB_blk_092917.svg"
-        //         break;
-        // }
+            case 2:
+                storeButton.src = "./Download-on-Apple-TV/US/Download_on_Apple_TV/Black_lockup/SVG/Download_on_Apple_TV_Badge_US-UK_RGB_blk_092917.svg"
+                break;
+        }
 
         // テンプレートのノードを複製
         clone = document.importNode(content, true);
