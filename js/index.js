@@ -28,6 +28,7 @@ function loadApps() {
  * @param {array} MyApp array 
  */
 function createCells(myapps) {
+
     var
         // template要素からコンテンツを取得、インスタンスの生成
         content = document.querySelector('#temp3').content,
