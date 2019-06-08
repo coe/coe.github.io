@@ -65,9 +65,9 @@ function createCells(myapps) {
 
         // テンプレートのノードを複製
         clone = document.importNode(content, true);
-        // clone.querySelector('button').addEventListener('click', () => {
-        //     onClickAppLink(myapp.link)
-        // });
+        clone.querySelector('#store_link_button').addEventListener('click', () => {
+            onClickAppLink(myapp.link)
+        });
 
         // 複製したノードをフラグメントに挿入
         fragment.appendChild(clone);
