@@ -1,0 +1,14 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "BC4CVJE8Z5.com.manga-bang.MangaBANG2",
+        "paths": [ "/sign_in_with_apple_done" ]
+      }
+    ]
+  },
+  "webcredentials": {
+    "apps": [ "BC4CVJE8Z5.com.manga-bang.MangaBANG2" ]
+  }
+}
