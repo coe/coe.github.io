@@ -4,9 +4,7 @@
     "details": [
       {
         "appID": "BC4CVJE8Z5.com.manga-bang.MangaBANG2",
-        "paths": [
-                    "/index.html"
-                ]
+        "paths": [ "/sign_in_with_apple_done" ]
       }
     ]
   },
