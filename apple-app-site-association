@@ -1,4 +1,17 @@
 {
+  "applinks": {
+      "details": [
+           {
+             "appIDs": [ "J96677DK6N.app.hyuga.Cliper" ],
+               {
+                  "/": "/help/*",
+                  "?": { "articleNumber": "????" },
+                  "comment": "Matches any URL whose path starts with /help/ and which has a query item with name 'articleNumber' and a value of exactly 4 characters"
+               }
+             ]
+           }
+       ]
+   },
    "appclips": {
         "details": [
            {
