@@ -1,8 +1,8 @@
 {
-  "applinks": {
-      "details": [
+   "appclips": {
+        "details": [
            {
-             "appIDs": [ "ABCDE12345.app.hyuga.clips", "ABCDE12345.app.hyuga.clips" ],
+             "appID":  "J96677DK6N.app.hyuga.Cliper.Clip",
              "components": [
                {
                   "#": "no_universal_links",
@@ -26,9 +26,6 @@
              ]
            }
        ]
-   },
-   "appclips": {
-        "apps": ["ABCDE12345.app.hyuga.clips"]
     },
    "webcredentials": {
       "apps": [ "ABCDE12345.com.example.app" ]
