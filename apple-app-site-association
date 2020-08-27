@@ -7,15 +7,6 @@
 		}]
 	},
    "appclips": {
-        "details": [
-           {
-             "appID":  "J96677DK6N.app.hyuga.Cliper.Clip",
-             "components": [
-               {
-                  "/": "/*"
-               }
-             ]
-           }
-       ]
-    },
+   		"apps": [ "J96677DK6N.app.hyuga.Cliper.Clip" ],
+    }
 }
