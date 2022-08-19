@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE books [
-<!ENTITY book2 SYSTEM "book2.xml">
-<!ENTITY srv "サーバーサイド技術">
+<!ENTITY book2 SYSTEM "https://coe.github.io/book2.xml">
+<!ENTITY srv "サーバーサイド技術2">
 ]>
  
 <books name="書籍情報">
